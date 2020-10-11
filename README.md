@@ -1,5 +1,9 @@
+
+
 # Python Approach Online already
 https://github.com/better/jsonschema2db/blob/master/jsonschema2db.py
+we can actually covert python to aws lambda
+https://www.youtube.com/watch?v=FbMX5a6j6vY&feature=youtu.be&ab_channel=PacktVideo
 
 ## Ruby Approach 1
  - flatten the Nested Json
