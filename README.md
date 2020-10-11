@@ -77,5 +77,8 @@ input.
 ----
 
 $docker-compose run app bash
+
 $bundle
+
 $bundle exec irb or bundle exec ruby [FileName].rb
+
