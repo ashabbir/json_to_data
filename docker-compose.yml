@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  app:
+    image: ruby:2.7.2
+    depends_on:
+      - db
+    volumes:
+      - ./:/app
+    environment:
+      - ENV=development
+    networks:
+      - dev
+
+  db:
+    networks:
+    - dev
+    logging:
+      options:
+        max-size: 500k
+    image: postgres:12
+    deploy:
+      placement:
+        constraints:
+        - node.role == worker
+        - node.labels.elastic != true
+        - node.labels.kafka != true
+    volumes:
+    - postgres:/var/lib/postgresql/data
+    environment:
+    - POSTGRES_USER=dev
+    - POSTGRES_PASSWORD=dev
+
+networks:
+  dev:
+    external: true
+
+volumes:
+  postgres:

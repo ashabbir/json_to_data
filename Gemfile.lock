@@ -1,0 +1,51 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activemodel (6.0.3.4)
+      activesupport (= 6.0.3.4)
+    activesupport (6.0.3.4)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+      zeitwerk (~> 2.2, >= 2.2.2)
+    coderay (1.1.3)
+    concurrent-ruby (1.1.7)
+    i18n (1.8.5)
+      concurrent-ruby (~> 1.0)
+    json (2.3.1)
+    json-schema-generator (0.0.9)
+      jsonpath
+    json_schema_tools (0.6.6)
+      json
+    jsonpath (1.0.5)
+      multi_json
+      to_regexp (~> 0.2.1)
+    method_source (1.0.0)
+    minitest (5.14.2)
+    multi_json (1.15.0)
+    pg (1.2.3)
+    pry (0.13.1)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    sequel (5.37.0)
+    thread_safe (0.3.6)
+    to_regexp (0.2.1)
+    tzinfo (1.2.7)
+      thread_safe (~> 0.1)
+    zeitwerk (2.4.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activemodel
+  activesupport
+  json-schema-generator
+  json_schema_tools
+  pg
+  pry
+  sequel
+
+BUNDLED WITH
+   2.1.4
