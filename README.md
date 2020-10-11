@@ -1,31 +1,31 @@
 
 
-Python Approach Online already
+#Python Approach Online already
 https://github.com/better/jsonschema2db/blob/master/jsonschema2db.py
 
-Ruby Approach 1
+##Ruby Approach 1
  - flatten the Nested Json
  - Connect to DB
  - create SELECT INTO Statement from Flatten JSON ( use object_type as
    table name)
  - check for exception If exists .. then do simple insert into
 
-Ruby Approach 2 (needs RND)
+##Ruby Approach 2 (needs RND)
  - create json schema
  - use that to generate Model
  - Run active record migration against the model that will create the DB
    table
  - insert ORM object into table
 
-Spark Approach (prefered & written in Zepplin Note book can be easily
+##Spark Approach (prefered & written in Zepplin Note book can be easily
 converted into Spark Submit app)
  - Read Json
  - infer Schema
  - insert into postgresql with append Mode (that should create the table
    if not exists. Use object_type as table name (given below)
 
-###
-
+-------------
+```
 //Zepplin NoteBook if u cant load json u can see the code here
 //This can be easily converted into a spark pipeline
 
@@ -73,9 +73,9 @@ input.
     option("user", user).
     option("password", password).
     save()            
-            
+```         
 
-
+----
 
 $docker-compose run app bash
 $bundle
